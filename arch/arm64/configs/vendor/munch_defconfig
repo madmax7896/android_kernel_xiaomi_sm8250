@@ -738,6 +738,10 @@ CONFIG_BUILD_ARM64_DT_OVERLAY=y
 # Enable block device writeback throttling
 CONFIG_BLK_WBT=y
 CONFIG_BLK_WBT_SQ=y
+# FileSystem
+CONFIG_EXFAT_FS=y
+CONFIG_NTFS_FS=y
+CONFIG_NTFS_RW=y
 # Frequency statistics
 CONFIG_CPU_FREQ_STAT=y
 # QCACLD
