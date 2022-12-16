@@ -356,7 +356,7 @@ static int fsa4480_probe(struct i2c_client *i2c,
 {
 	struct fsa4480_priv *fsa_priv;
 	int rc = 0;
-#ifdef CONFIG_TARGET_PRODUCT_MUNCH
+#ifdef CONFIG_MACH_XIAOMI_MUNCH
 	union power_supply_propval mode;
 #endif
 
@@ -407,7 +407,7 @@ static int fsa4480_probe(struct i2c_client *i2c,
 
 	BLOCKING_INIT_NOTIFIER_HEAD(&fsa_priv->fsa4480_notifier);
 
-#ifdef CONFIG_TARGET_PRODUCT_MUNCH
+#ifdef CONFIG_MACH_XIAOMI_MUNCH
 	/* set usbc_mode initial value */
 	rc = power_supply_get_property(fsa_priv->usb_psy,
 			POWER_SUPPLY_PROP_TYPEC_MODE, &mode);
